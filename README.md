@@ -16,7 +16,7 @@ The point becomes the sin.
 
 ## Create an automation
 
-Press the "Create script" button if all points are adjustable.
+Press the "Create Script" button if all points are adjustable.
 Enter the name of your test script. Your test is stored in the "scripts" folder.
 
 Have fun :)
