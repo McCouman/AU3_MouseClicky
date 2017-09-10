@@ -26,7 +26,7 @@
 Global $Version = 1.2
 
 ;start gui
-MouseClicky_GUI()
+MouseClicky_GUI($Version)
 
 
 Func MouseClicky_GUI($Version)
