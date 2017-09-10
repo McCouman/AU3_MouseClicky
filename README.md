@@ -5,7 +5,7 @@ A simple tool for creating a mouse based desktop automation.
 
 ## Download
 
-Click <a href="https://github.com/McCouman/AU3_MouseClicky/blob/master/MauseClicky.1.2.zip?raw=true"> here </a> to download the MouseClicky tool.
+Click <a href="https://github.com/McCouman/AU3_MouseClicky/blob/master/MouseClicky.1.2.zip?raw=true"> here </a> to download the MouseClicky tool.
 
 ## Start and use
 

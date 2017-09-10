@@ -30,17 +30,23 @@ MouseClicky_GUI($Version)
 
 
 Func MouseClicky_GUI($Version)
+
+	Local $active = false
+
 	; Sets the coord mode to use absolute screen coordinates
 	Opt("MouseCoordMode", 1)
 
 	#Region ### START Koda GUI section ### Form=C:\Users\McCouman\Desktop\MyAutomator\automator.kxf
-	$Form1_1 = GUICreate("Mause Clicker", 458, 149, 327, 225, -1, BitOR($WS_EX_APPWINDOW, $WS_EX_CONTEXTHELP))
+	$Form1_1 = GUICreate("MouseClicky " & $Version, 458, 149, -1, -1, -1, BitOR($WS_EX_APPWINDOW, $WS_EX_CONTEXTHELP))
 	$Menu = GUICtrlCreateMenu("Menu")
 	$MenuInfo = GUICtrlCreateMenuItem("Info", $Menu)
 	$MenuExit = GUICtrlCreateMenuItem("Exit" & @TAB & "Ctrl+Del", $Menu)
-	$Help = GUICtrlCreateMenu("Help")
-	$HelpListDeactive = GUICtrlCreateMenuItem("List dective", $Help)
-	$HelpListActive = GUICtrlCreateMenuItem("List active", $Help)
+	$helpList = GUICtrlCreateMenu("Editor")
+	If $active = false Then
+		$HelpListActive = GUICtrlCreateMenuItem("enable", $helpList)
+	Else
+		$HelpListActive = GUICtrlCreateMenuItem("disable", $helpList)
+	EndIf
 
 	$LabelX = GUICtrlCreateLabel("X", 8, 8, 11, 17)
 	$MouseX = GUICtrlCreateLabel("0000", 8, 24, 34, 17)
@@ -79,11 +85,22 @@ Func MouseClicky_GUI($Version)
 		Switch $nMsg
 			Case $GUI_EVENT_CLOSE, $MenuExit
 				Exit
+
 			Case $HelpListActive
 				GUICtrlSetState($List, $GUI_ENABLE)
+				If $active = false Then
+					GUICtrlSetState($List, $GUI_ENABLE)
+					GUICtrlSetData($HelpListActive, "disable")
+					$active = true
+				Else
+					GUICtrlSetState($List, $GUI_DISABLE)
+					GUICtrlSetData($HelpListActive, "enable")
+					$active = false
+				EndIf
 
-			Case $HelpListDeactive
-				GUICtrlSetState($List, $GUI_DISABLE)
+
+			Case $MenuInfo
+				MsgBox(0, "Info", 'Hold down the "ctrl" key and click on your desktop to save the coordinates.')
 
 			Case $btnSave
 				;
