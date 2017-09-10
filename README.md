@@ -1,6 +1,4 @@
 # MouseClicky Tool (Windows)
-Mouse Pointer tool to generate a desktop automation
-
 <img src="https://raw.githubusercontent.com/McCouman/AU3_MouseClicky/master/Screenshot.png"/>
 
 A simple tool for creating a mouse based desktop automation.
