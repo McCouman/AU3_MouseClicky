@@ -1,32 +1,3 @@
-# MouseClicky Tool (Windows)
-Mouse Pointer tool to generate a desktop automation
-
-<img src="https://raw.githubusercontent.com/McCouman/AU3_MouseClicky/master/Screenshot.png"/>
-
-A simple tool for creating a mouse based desktop automation.
-
-## Download
-
-Click <a href="https://github.com/McCouman/AU3_MouseClicky/blob/master/MauseClicky.1.2.zip?raw=true"> here </a> to download the MouseClicky tool.
-
-## Start and use
-
-Start the MouseClicky.exe. Use the mouse to point to a point on your desktop and hold down the "ctrl" key. Now click the left mouse button to save the X and Y coordinates.
-
-To order a new point, press the "Save" button and enter a description.
-The point becomes the sin.
-
-## Create an automation
-
-Press the "Create script" button if all points are adjustable.
-Enter the name of your test script. Your test is stored in the "scripts" folder.
-
-Have fun :)
-
-Michael
-
-## License
-
 The MIT License (MIT)
 
 Copyright (c) 2017 Michael Kaufmann (Michael McCouman Jr.)
